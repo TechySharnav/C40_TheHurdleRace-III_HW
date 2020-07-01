@@ -6,14 +6,9 @@ const Constraint = Matter.Constraint;
 var engine, world;
 var backgroundImg, platform;
 var stone, slingShot;
-var bg, font;
-var Score = 0;
 
 function preload() {
-   // backgroundImg = loadImage("sprites/bg_day.jpg");
-
-   getBGImg();
-   font = loadFont('sprites/font.ttf');
+    backgroundImg = loadImage("sprites/BG.jpg");
 }
 
 function setup() {
@@ -65,10 +60,7 @@ function setup() {
 }
 
 function draw() {
-    if(backgroundImg){
     background(backgroundImg);
-    }
-
     Engine.update(engine);
     strokeWeight(2);
 
@@ -104,48 +96,11 @@ function draw() {
 	log3.display();
 	log4.display();
 
-
-    block1.score();
-    block2.score();
-    block3.score();
-    block4.score();
-    block5.score();
-    block6.score();
-	block7.score();
-	block8.score();
-	block9.score();
-	
-	block10.score();
-	block11.score();
-	block12.score();
-	block13.score();
-	block14.score();
-	block15.score();
-	block16.score();
-	block17.score();
-	block18.score();
-	block19.score();
-
-    log1.score();
-	log2.score();
-	
-	log3.score();
-	log4.score();
-
     slingShot.display();
 	
-    textSize(20);
-    fill("#ff0000");
-    textFont("Helvetica")
-    text("Drag the stone & Destroy the Tower of Blocks!!",480, 30);
-    textSize(12);
-    text("(Hit them really hard to make them disappear. Press SPACE to attach stone to Slingshot.)",440, 50);
-    textFont(font);
-    textSize(20);
-    fill("#FF6600");
-    text("Score:", width-120, 25);
-	textSize(40);
-    text(Score, width -100, 60);
+	textSize(20);
+	fill("white");
+	text("Drag the stone & Destroy the Tower of Blocks!!",480, 30);
 	
 	console.log(stone.body.position.x);
 
@@ -160,26 +115,4 @@ function mouseDragged() {
 
 function mouseReleased() {
     slingShot.fly();
-}
-
-function keyPressed(){
-    if(keyCode === 32){
-        slingShot.attach(stone.body);
-    }
-}
-
-async function getBGImg(){
-    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
-    var responseJSON = await response.json();
-    var datetime =  responseJSON.datetime;
-    var hour = datetime.slice(11,13);
-
-    if(hour >= 06 && hour <= 18){
-        bg = 'sprites/bg_day.jpg';
-    }
-    else{
-        bg = 'sprites/bg_night.png';
-    }
-
-    backgroundImg = loadImage(bg);
 }

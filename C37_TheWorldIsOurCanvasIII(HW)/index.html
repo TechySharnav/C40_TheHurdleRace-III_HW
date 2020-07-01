@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+  <script src="p5.play.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+c
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBCmeJXa4u4ptkSrm79raYwgXbk14-3SYw",
+    authDomain: "c36-world-is-our-canvas-ii-hw.firebaseapp.com",
+    databaseURL: "https://c36-world-is-our-canvas-ii-hw.firebaseio.com",
+    projectId: "c36-world-is-our-canvas-ii-hw",
+    storageBucket: "c36-world-is-our-canvas-ii-hw.appspot.com",
+    messagingSenderId: "176399895326",
+    appId: "1:176399895326:web:8a365222a83c2abdc1570f"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+  <script src="sketch.js"></script>
+  <div id ="canvascontainer"></div>
+
+  <p>
+    <b><button id="saveButton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></b>
+      <b><button id="clearButton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></b>
+  </p>
+
+  <p>
+    <ol id="drawinglist">
+
+    </ol>
+</body>
+</html>

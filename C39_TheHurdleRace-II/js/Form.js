@@ -14,10 +14,10 @@ class Form {
   display(){
     var title = createElement('h2')
     title.html("Hurdle Game");
-    title.position(windowWidth/2 -50, 0);
+    title.position(displayWidth/2 -50, 0);
 
-    this.input.position(windowWidth/2 -40, windowHeight/2 - 80);
-    this.button.position(windowWidth/2+30, windowHeight/2);
+    this.input.position(displayWidth/2 -40, displayHeight/2 - 80);
+    this.button.position(displayWidth/2+30, displayHeight/2);
 
     this.button.mousePressed(()=>{
       this.input.hide();
@@ -28,7 +28,7 @@ class Form {
       player.update();
       player.updateCount(playerCount);
       this.greeting.html("Hello " + player.name)
-      this.greeting.position(windowWidth/2-70, windowHeight/4);
+      this.greeting.position(displayWidth/2-70, displayHeight/4);
     });
 
   }

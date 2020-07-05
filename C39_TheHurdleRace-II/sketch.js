@@ -11,7 +11,7 @@ var p1Img, p2Img, p3Img, p4Img;
 var players;
 
 var players = [];
-var hurdle, hud1, hud2, hud3, hud4, hud5, hud6, hud7, hud8, hud9, hud10, hud11, hud12, hud13, hud14, hud15 , hud16, hud17, hud18, hud19, hud20;
+var hurdle, hud1, hud2, hud3, hud4, hud5, hud6, hud7, hud8, hud9, hud10, hud11, hud12, hud13, hud14, hud15 , hud16, hud17, hud18, hud19, hud20, hud21, hud22;
 var hurdlesGroup;
 
 var inviG1, inviG2, inviG3, inviG4; 

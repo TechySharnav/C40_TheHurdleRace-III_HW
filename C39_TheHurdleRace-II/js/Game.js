@@ -111,19 +111,7 @@ class Game {
     hud22 = createSprite(4280, 725, 10, 50);
     hurdlesGroup.add(hud22);
 
-    // inviG1 = createSprite(3280, 335, 5500, 10);
-    // inviG1.visible = false;
-
-    // inviG2 = createSprite(3280, 535, 5500, 10);
-    // inviG2.visible = false;
-
-    // inviG3 = createSprite(3280, 735, 5500, 10);
-    // inviG3.visible = false;
-
-    // inviG4 = createSprite(3280, 935, 5500, 10);
-    // inviG4.visible = false;
-
-
+  
   }
 
   play() {
@@ -144,7 +132,7 @@ class Game {
 
       for (var plr in allPlayers) {
         index += 1;
-        zx = windowWidth + allPlayers[plr].distance;;
+        zx = displayWidth + allPlayers[plr].distance;;
 
         zy += 200;
 
@@ -167,19 +155,13 @@ class Game {
       }
 
 
-      p1.collide(inviG1);
-      p2.collide(inviG2);
-      p3.collide(inviG3);
-      p4.collide(inviG4);
+
 
       players[index - 1].velocityY += 0.8;
 
       if(keyDown("space") && zy > 920){
         console.log("Space key Pressed");
         players[index -1].velocityX = -10;
-      }
-      if(hurdlesGroup.isTouching(players[index -1])){
-        players.splice(index-1, 1);
       }
 
       if (keyIsDown(RIGHT_ARROW) && gameState === 1 && player.index !== null) {
@@ -188,7 +170,7 @@ class Game {
         player.update();
       }
 
-      if (player.distance > 1290) {
+      if (player.distance > 2600) {
         gameState = 2;
         game.update(2)
       }
